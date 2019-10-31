@@ -1,10 +1,11 @@
-package com.share.comin
+package com.share.comin.Adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.share.comin.R
 import kotlinx.android.synthetic.main.viewpager_item.view.*
 
 class ViewPager2Adaper(private val context: Context) : RecyclerView.Adapter<PagerVH>() {
@@ -18,7 +19,13 @@ class ViewPager2Adaper(private val context: Context) : RecyclerView.Adapter<Page
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagerVH =
-        PagerVH(LayoutInflater.from(parent.context).inflate(R.layout.viewpager_item, parent, false))
+        PagerVH(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.viewpager_item,
+                parent,
+                false
+            )
+        )
 
 
     override fun getItemCount(): Int = image.size

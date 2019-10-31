@@ -1,4 +1,4 @@
-package com.share.comin
+package com.share.comin.Adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,14 +8,14 @@ import android.widget.LinearLayout
 import androidx.viewpager.widget.PagerAdapter
 import com.share.comin.databinding.ViewpagerItemBinding
 
+
 class ViewPagerAdapter(private val context: Context) : PagerAdapter() {
 
+
     private val image = arrayOf(
-        R.drawable.html,
-        R.drawable.ai,
-        R.drawable.css,
-        R.drawable.html,
-        R.drawable.ai
+        com.share.comin.R.drawable.ai,
+        com.share.comin.R.drawable.css,
+        com.share.comin.R.drawable.html
     )
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
@@ -30,7 +30,7 @@ class ViewPagerAdapter(private val context: Context) : PagerAdapter() {
         val binding = ViewpagerItemBinding.inflate(LayoutInflater.from(context), container, false)
         binding.ivViewpagerItem.setImageResource(image[position])
 
-        container.addView(binding.root)
+        container.addView(binding.root, 0)
 
         return binding.root
     }

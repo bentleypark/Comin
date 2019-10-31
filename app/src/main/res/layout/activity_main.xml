@@ -6,12 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-   <androidx.viewpager2.widget.ViewPager2
+   <androidx.viewpager.widget.ViewPager
        android:id="@+id/viewpager"
        app:layout_constraintTop_toTopOf="parent"
        android:layout_width="match_parent"
        android:layout_height="220dp"
-       android:overScrollMode="never"
        />
 
    <GridView

@@ -1,10 +1,11 @@
-package com.share.comin
+package com.share.comin.Adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import com.share.comin.R
 import com.share.comin.databinding.GridviewItemBinding
 
 class GridviewAdapter (val context: Context) : BaseAdapter(){
